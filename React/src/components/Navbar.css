@@ -1,0 +1,72 @@
+/* Reusable flex class */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* Header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #0d1117;
+}
+
+/* Navbar */
+nav {
+  height: 70px;
+  padding: 0 60px;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #c9d1d9;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline effect */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #58a6ff;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #58a6ff;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 25px;
+  }
+
+  .nav-links {
+    display: none; /* hide for now (hamburger later) */
+  }
+}
